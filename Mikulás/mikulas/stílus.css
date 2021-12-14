@@ -1,0 +1,86 @@
+main{
+    max-width: 1000px;
+    box-sizing: border-box;
+    width: 80%;
+    display: grid;
+    grid-template-areas: 
+    "h h h"
+    "n n n"
+    "as a a"
+    "f f f";
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    text-align: justify;
+}
+body{
+    background-image: url(kepek/hatter.jpg);
+    box-sizing: border-box;
+}
+article{
+    box-sizing: border-box;
+    grid-area: a;
+    background-color: white;
+}
+article img{
+    float: right;
+}
+aside{
+    box-sizing: border-box;
+    grid-area: as;
+}
+aside img{
+    width: 100%;
+}
+nav{
+    height: 50px;
+    box-sizing: border-box;
+    grid-area: n;
+    box-sizing: border-box;
+    background-color: red;
+}
+nav ul{
+    display: grid;
+    list-style-type: none;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+nav li{
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    float: left;
+
+}
+nav li a{
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: white;
+}
+footer{
+    grid-area: f;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+header{
+    background-image: url(kepek/fejlec.jpg);
+    height: 550px;
+    grid-area: h;
+    font-family: cursive;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: bold;
+    
+}
+@media screen and (max-width: 700px){
+   main{
+    grid-template-areas: 
+    "h"
+    "n"
+    "a"
+    "as"
+    "f";
+    grid-template-columns: 1fr;
+   }
+}
